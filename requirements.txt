@@ -16,3 +16,6 @@ lxml>=5.0.0
 
 #env
 python-dotenv >=1.0.0
+
+#logging
+rich >= 13.7.0

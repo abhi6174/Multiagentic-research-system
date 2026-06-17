@@ -1,9 +1,5 @@
-from src.tools.tools import web_search,scrape_url
+from src.pipeline.pipeline import run_research_pipeline
 
-query = "top tourist spots in kerala"
-# output = web_search(query)
-# print(output)
-url =  "https://www.reddit.com/r/singularity/comments/1s5a0h1/deepminds_new_ai_just_changed_science_forever/"
-res = scrape_url(url)
+topic = "latest news on ai"
+res = run_research_pipeline(topic)
 
-print(res)

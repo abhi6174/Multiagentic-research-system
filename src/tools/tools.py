@@ -1,8 +1,7 @@
-from langchain.tools import Tool
+from langchain.tools import tool
 import os
 from dotenv import load_dotenv
 from tavily import TavilyClient
-from rich import print
 
 #webscraping libraries
 from bs4 import BeautifulSoup
@@ -15,7 +14,7 @@ load_dotenv()
 tavily = TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
 
 #Tool for getting relevant urls on a topic
-@Tool
+@tool
 def web_search(query:str) -> str:
     """Tool for searching across web and provide reliable results"""
 
@@ -28,7 +27,7 @@ def web_search(query:str) -> str:
     return "\n-----\n".join(output)
 
 #Tool for webscaping content from a url
-@Tool
+@tool
 def scrape_url(url: str) -> str:
     """
     Scrape and extract clean readable content from a URL.

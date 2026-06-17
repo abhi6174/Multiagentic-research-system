@@ -1,21 +1,26 @@
-langchain>= 0.2.0
-langchain-community>=0.2.0
-langchain-core>=0.2.0
-langchain-groq>=0.1.3,<0.2.0
-streamlit>=1.0.0
+# Unified High-Level Framework (Contains create_agent)
+langchain>=1.3.0,<2.0.0
+langchain-core>=1.4.0,<2.0.0
+langchain-community>=0.4.0,<0.5.0
 
+# LLM Providers & Core Ecosystem Orchestration
+langchain-groq>=1.0.0,<2.0.0
+langgraph>=1.2.0,<2.0.0
+
+# UI & Web Interfaces
+streamlit>=1.35.0
+
+# Search & Research Tools
 tavily-python>=0.3.0
 
-#webscraping
-
+# Deep Webscraping & Parsing Utilities
 beautifulsoup4>=4.12.0
-readability-lxml
-trafilatura
+readability-lxml>=0.8.0
+trafilatura>=1.6.0
 requests>=2.31.0
 lxml>=5.0.0
 
-#env
-python-dotenv >=1.0.0
+# Environment Management
+python-dotenv>=1.0.0
 
-#logging
-rich >= 13.7.0
+rich

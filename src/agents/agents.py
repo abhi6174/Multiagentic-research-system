@@ -3,25 +3,16 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-from src.tools.tools import web_search,scrape_url
+from src.tools.tools import scrape_url
 from dotenv import load_dotenv
 
 load_dotenv()
 
 #model initialization
 llm = ChatGroq(
-    model= "meta-llama/llama-4-scout-17b-16e-instruct",
+    model= "openai/gpt-oss-120b",
     temperature= 0
 )
-
-
-# build search agent
-def build_search_agent():
-    return create_agent(
-        model = llm,
-        tools=[web_search],
-       
-    )
 
 # build reader agent
 def build_reader_agent():

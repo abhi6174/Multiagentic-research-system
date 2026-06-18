@@ -51,3 +51,5 @@ def run_research_pipeline(topic:str) -> dict:
         "report":state['report']
     })
     print("\n critiq :\n",state["Evaluation"])
+
+    return state
